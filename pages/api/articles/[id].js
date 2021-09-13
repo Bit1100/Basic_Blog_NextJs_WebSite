@@ -1,11 +1,9 @@
-import { articles } from "../../../data.json";
+import { articles } from "../../../data";
 
 export default function articlesHandler(req, res) {
   const id = req.query.id;
 
-  const filteredArticle = JSON.parse(articles).filter(
-    (article) => article.id === id
-  );
+  const filteredArticle = articles.filter((article) => article.id === id);
 
   if (filteredArticle.length) {
     res.status(200).json(filteredArticle[0]);
