@@ -11,7 +11,7 @@ const ErrorPage = () => {
       router.push("/");
     }, 4000);
     setMessage("Redirecting to Home Page");
-  }, []);
+  }, [router]);
 
   return (
     <>
